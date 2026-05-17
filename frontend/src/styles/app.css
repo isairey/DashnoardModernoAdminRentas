@@ -1,0 +1,348 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ============================================================================
+   ENTERPRISE SAAS DESIGN SYSTEM
+   Clean, professional styling inspired by Zoho/Odoo interfaces
+   - No gradients
+   - White/gray backgrounds
+   - Subtle borders
+   - Minimal shadows
+   - Focus on typography and spacing
+   ============================================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #f9fafb; /* gray-50 */
+  color: #111827; /* gray-900 */
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ============================================================================
+   ENTERPRISE COMPONENT CLASSES
+   ============================================================================ */
+
+@layer components {
+  /* --------------------------------------------------------------------------
+     BUTTONS - Enterprise style with gray primary
+     -------------------------------------------------------------------------- */
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 bg-gray-900 text-white px-4 py-2 rounded-md 
+           text-sm font-medium hover:bg-gray-800 active:bg-gray-950 
+           transition-colors duration-150 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-secondary {
+    @apply inline-flex items-center justify-center gap-2 bg-white text-gray-700 px-4 py-2 rounded-md 
+           text-sm font-medium border border-gray-300 
+           hover:bg-gray-50 active:bg-gray-100 
+           transition-colors duration-150;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-gray-700 px-4 py-2 rounded-md 
+           text-sm font-medium border border-gray-300 
+           hover:bg-gray-50 active:bg-gray-100 
+           transition-colors duration-150;
+  }
+
+  .btn-ghost {
+    @apply inline-flex items-center justify-center gap-2 bg-transparent text-gray-600 px-4 py-2 rounded-md 
+           text-sm font-medium 
+           hover:bg-gray-100 hover:text-gray-900 
+           transition-colors duration-150;
+  }
+
+  .btn-danger {
+    @apply inline-flex items-center justify-center gap-2 bg-red-600 text-white px-4 py-2 rounded-md 
+           text-sm font-medium hover:bg-red-700 active:bg-red-800 
+           transition-colors duration-150 
+           disabled:opacity-50 disabled:cursor-not-allowed;
+  }
+
+  .btn-success {
+    @apply inline-flex items-center justify-center gap-2 bg-emerald-600 text-white px-4 py-2 rounded-md 
+           text-sm font-medium hover:bg-emerald-700 active:bg-emerald-800 
+           transition-colors duration-150;
+  }
+
+  .btn-sm {
+    @apply px-3 py-1.5 text-xs;
+  }
+
+  .btn-lg {
+    @apply px-5 py-2.5 text-base;
+  }
+
+  /* --------------------------------------------------------------------------
+     FORM INPUTS - Clean enterprise style
+     -------------------------------------------------------------------------- */
+  .input-field {
+    @apply w-full h-10 px-3 text-sm bg-white border border-gray-300 rounded-md 
+           placeholder:text-gray-400 
+           focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-1 focus:border-gray-900 
+           disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed
+           transition-all duration-150;
+  }
+
+  .input-error {
+    @apply border-red-500 focus:ring-red-500 focus:border-red-500;
+  }
+
+  .input-label {
+    @apply block text-sm font-medium text-gray-700 mb-1.5;
+  }
+
+  .input-hint {
+    @apply text-xs text-gray-500 mt-1;
+  }
+
+  .input-error-text {
+    @apply text-xs text-red-600 mt-1;
+  }
+
+  /* --------------------------------------------------------------------------
+     CARDS - Minimal shadow, subtle border
+     -------------------------------------------------------------------------- */
+  .card {
+    @apply bg-white rounded-lg border border-gray-200 p-5;
+  }
+
+  .card-header {
+    @apply flex items-center justify-between pb-4 border-b border-gray-200 mb-4;
+  }
+
+  .card-title {
+    @apply text-base font-semibold text-gray-900;
+  }
+
+  .card-description {
+    @apply text-sm text-gray-500 mt-1;
+  }
+
+  /* --------------------------------------------------------------------------
+     TABLES - Enterprise data tables
+     -------------------------------------------------------------------------- */
+  .table-container {
+    @apply bg-white border border-gray-200 rounded-lg overflow-hidden;
+  }
+
+  .table-header {
+    @apply px-4 py-3 text-left text-xs font-semibold text-gray-500 uppercase tracking-wider bg-gray-50 border-b border-gray-200;
+  }
+
+  .table-cell {
+    @apply px-4 py-3 text-sm text-gray-900 border-b border-gray-100;
+  }
+
+  .table-row {
+    @apply hover:bg-gray-50 transition-colors;
+  }
+
+  .table-row-selected {
+    @apply bg-gray-50;
+  }
+
+  /* --------------------------------------------------------------------------
+     BADGES & STATUS INDICATORS
+     -------------------------------------------------------------------------- */
+  .badge {
+    @apply inline-flex items-center gap-1 px-2 py-0.5 rounded text-xs font-medium;
+  }
+
+  .badge-success {
+    @apply bg-emerald-50 text-emerald-700 border border-emerald-200;
+  }
+
+  .badge-warning {
+    @apply bg-amber-50 text-amber-700 border border-amber-200;
+  }
+
+  .badge-error {
+    @apply bg-red-50 text-red-700 border border-red-200;
+  }
+
+  .badge-info {
+    @apply bg-blue-50 text-blue-700 border border-blue-200;
+  }
+
+  .badge-neutral {
+    @apply bg-gray-100 text-gray-700 border border-gray-200;
+  }
+
+  /* --------------------------------------------------------------------------
+     NAVIGATION - Sidebar & horizontal nav
+     -------------------------------------------------------------------------- */
+  .sidebar-link {
+    @apply flex items-center gap-3 px-3 py-2 rounded-md text-sm text-gray-600 
+           hover:bg-gray-100 hover:text-gray-900 transition-colors duration-150;
+  }
+
+  .sidebar-link-active {
+    @apply flex items-center gap-3 px-3 py-2 rounded-md text-sm bg-gray-100 text-gray-900 font-medium;
+  }
+
+  .nav-link {
+    @apply flex items-center gap-2 px-3 py-2 text-sm font-medium text-gray-600 
+           rounded-md hover:bg-gray-100 hover:text-gray-900 transition-colors duration-150;
+  }
+
+  .nav-link-active {
+    @apply flex items-center gap-2 px-3 py-2 text-sm font-medium bg-gray-100 text-gray-900 rounded-md;
+  }
+
+  /* --------------------------------------------------------------------------
+     METRICS / KPI CARDS
+     -------------------------------------------------------------------------- */
+  .kpi-card {
+    @apply bg-white border border-gray-200 rounded-lg p-5;
+  }
+
+  .kpi-label {
+    @apply text-xs font-medium text-gray-500 uppercase tracking-wide;
+  }
+
+  .kpi-value {
+    @apply text-2xl font-semibold text-gray-900 mt-1;
+  }
+
+  .kpi-change-positive {
+    @apply text-xs font-medium text-emerald-600;
+  }
+
+  .kpi-change-negative {
+    @apply text-xs font-medium text-red-600;
+  }
+
+  /* --------------------------------------------------------------------------
+     DROPDOWNS & MENUS
+     -------------------------------------------------------------------------- */
+  .dropdown-menu {
+    @apply bg-white border border-gray-200 rounded-lg shadow-lg overflow-hidden;
+  }
+
+  .dropdown-item {
+    @apply flex items-center gap-3 px-4 py-2.5 text-sm text-gray-700 
+           hover:bg-gray-50 transition-colors cursor-pointer;
+  }
+
+  .dropdown-item-danger {
+    @apply flex items-center gap-3 px-4 py-2.5 text-sm text-red-600 
+           hover:bg-red-50 transition-colors cursor-pointer;
+  }
+
+  /* --------------------------------------------------------------------------
+     TABS
+     -------------------------------------------------------------------------- */
+  .tab-list {
+    @apply flex items-center gap-1 border-b border-gray-200;
+  }
+
+  .tab-trigger {
+    @apply px-4 py-2.5 text-sm font-medium text-gray-500 
+           hover:text-gray-700 border-b-2 border-transparent 
+           -mb-px transition-colors;
+  }
+
+  .tab-trigger-active {
+    @apply px-4 py-2.5 text-sm font-medium text-gray-900 
+           border-b-2 border-gray-900 -mb-px;
+  }
+
+  /* --------------------------------------------------------------------------
+     EMPTY STATES
+     -------------------------------------------------------------------------- */
+  .empty-state {
+    @apply flex flex-col items-center justify-center py-12 px-6 text-center;
+  }
+
+  .empty-state-icon {
+    @apply w-12 h-12 text-gray-300 mb-4;
+  }
+
+  .empty-state-title {
+    @apply text-base font-medium text-gray-900 mb-1;
+  }
+
+  .empty-state-description {
+    @apply text-sm text-gray-500 max-w-sm;
+  }
+
+  /* --------------------------------------------------------------------------
+     LOADING STATES
+     -------------------------------------------------------------------------- */
+  .skeleton {
+    @apply bg-gray-200 rounded animate-pulse;
+  }
+
+  .skeleton-text {
+    @apply h-4 bg-gray-200 rounded animate-pulse;
+  }
+
+  .skeleton-circle {
+    @apply rounded-full bg-gray-200 animate-pulse;
+  }
+}
+
+/* ============================================================================
+   CUSTOM SCROLLBAR - Minimal enterprise style
+   ============================================================================ */
+
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #d1d5db;
+  border-radius: 3px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9ca3af;
+}
+
+/* Firefox scrollbar */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #d1d5db transparent;
+}
+
+/* ============================================================================
+   FOCUS STYLES - Consistent focus indicators
+   ============================================================================ */
+
+:focus-visible {
+  outline: 2px solid #111827;
+  outline-offset: 2px;
+}
+
+/* Remove focus outline for mouse users, keep for keyboard */
+:focus:not(:focus-visible) {
+  outline: none;
+}
+
+/* ============================================================================
+   TRANSITIONS & ANIMATIONS
+   ============================================================================ */
+
+.transition-default {
+  transition-property: color, background-color, border-color, transform, opacity;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}

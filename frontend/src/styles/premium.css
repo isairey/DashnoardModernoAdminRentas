@@ -1,0 +1,190 @@
+/* Premium UI Enhancements for Hackathon */
+
+/* Better font rendering */
+* {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Grid Pattern Background */
+.bg-grid-pattern {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.1) 1px, transparent 1px);
+  background-size: 40px 40px;
+}
+
+/* Blob Animation */
+@keyframes blob {
+  0%, 100% {
+    transform: translate(0, 0) scale(1);
+  }
+  33% {
+    transform: translate(30px, -50px) scale(1.1);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.9);
+  }
+}
+
+.animate-blob {
+  animation: blob 7s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+/* Glassmorphism effect */
+.glass {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+/* Premium button styles */
+.btn-primary {
+  @apply px-4 py-2.5 bg-gray-900 text-white text-sm font-medium rounded-lg 
+         hover:bg-gray-800 active:scale-[0.98]
+         focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2
+         disabled:opacity-50 disabled:cursor-not-allowed disabled:hover:bg-gray-900
+         transition-all duration-200 shadow-sm hover:shadow;
+}
+
+.btn-secondary {
+  @apply px-4 py-2.5 bg-white text-gray-700 text-sm font-medium rounded-lg border border-gray-200
+         hover:bg-gray-50 hover:border-gray-300 active:scale-[0.98]
+         focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2
+         disabled:opacity-50 disabled:cursor-not-allowed
+         transition-all duration-200 shadow-sm hover:shadow;
+}
+
+.btn-ghost {
+  @apply px-4 py-2.5 text-gray-600 text-sm font-medium rounded-lg
+         hover:bg-gray-100 hover:text-gray-900 active:scale-[0.98]
+         focus:outline-none focus:ring-2 focus:ring-gray-900 focus:ring-offset-2
+         transition-all duration-200;
+}
+
+/* Premium input styles */
+.input-field {
+  @apply w-full h-11 px-4 text-sm bg-white border border-gray-200 rounded-lg
+         placeholder:text-gray-400
+         focus:outline-none focus:ring-2 focus:ring-gray-900 focus:border-transparent
+         disabled:bg-gray-50 disabled:text-gray-500 disabled:cursor-not-allowed
+         transition-all duration-200;
+}
+
+/* Card styles with subtle hover */
+.card {
+  @apply bg-white border border-gray-200 rounded-lg shadow-sm
+         hover:border-gray-300 hover:shadow-md
+         transition-all duration-300;
+}
+
+/* Badge styles */
+.badge {
+  @apply inline-flex items-center px-2.5 py-0.5 text-xs font-medium rounded-full;
+}
+
+.badge-primary {
+  @apply badge bg-gray-900 text-white;
+}
+
+.badge-secondary {
+  @apply badge bg-gray-100 text-gray-700;
+}
+
+.badge-success {
+  @apply badge bg-emerald-100 text-emerald-700;
+}
+
+.badge-warning {
+  @apply badge bg-amber-100 text-amber-700;
+}
+
+.badge-error {
+  @apply badge bg-red-100 text-red-700;
+}
+
+/* Custom scrollbar */
+.scrollbar-thin::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.scrollbar-thin::-webkit-scrollbar-track {
+  @apply bg-gray-100 rounded-full;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb {
+  @apply bg-gray-300 rounded-full;
+}
+
+.scrollbar-thin::-webkit-scrollbar-thumb:hover {
+  @apply bg-gray-400;
+}
+
+/* Smooth animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+.animate-slide-up {
+  animation: slideUp 0.3s ease-out;
+}
+
+.animate-scale-in {
+  animation: scaleIn 0.2s ease-out;
+}
+
+/* Loading spinner */
+.spinner {
+  @apply w-5 h-5 border-2 border-white border-t-transparent rounded-full animate-spin;
+}
+
+/* Focus visible for accessibility */
+*:focus-visible {
+  @apply outline-none ring-2 ring-gray-900 ring-offset-2;
+}
+
+/* Better link hover states */
+a:not(.btn-primary):not(.btn-secondary):not(.btn-ghost) {
+  @apply transition-colors duration-200;
+}
