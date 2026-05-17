@@ -194,7 +194,7 @@ Este módulo funciona como administrador principal.
 # 📂 Estructura del proyecto
 
 ```bash
-Premium-Rental-Management-Dashboard/
+DashnoardModernoAdminRentas/
 │
 ├── src/                      # Código fuente React
 ├── components/               # Componentes reutilizables
@@ -226,7 +226,7 @@ Premium-Rental-Management-Dashboard/
 ## 1️⃣ Clonar repositorio
 
 ```bash
-git clone https://github.com/isairey/Premium-Rental-Management-Dashboard.git
+git clone https://github.com/isairey/DashnoardModernoAdminRentas.git
 ```
 
 ---
@@ -282,33 +282,6 @@ http://localhost:5173
 - Historial de actividad
 - Accesos seguros
 
----
-
-# 📸 Vista previa
-
-## 🖥️ Interfaces del sistema
-
-<div align="center">
-
-### 📊 Dashboard principal
-![Dashboard](https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop)
-
-### 🏠 Gestión de propiedades
-![Properties](https://images.unsplash.com/photo-1560518883-ce09059eeffa?q=80&w=1200&auto=format&fit=crop)
-
-### 👥 Gestión de usuarios
-![Users](https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop)
-
-### 💳 Reportes financieros
-![Finance](https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1200&auto=format&fit=crop)
-
-### 📈 Estadísticas y analíticas
-![Analytics](https://images.unsplash.com/photo-1460925895917-afdab827c52f?q=80&w=1200&auto=format&fit=crop)
-
-### 🌙 Diseño premium moderno
-![Modern UI](https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop)
-
-</div>
 
 ---
 
