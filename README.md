@@ -355,7 +355,7 @@ git push origin feature/nueva-funcionalidad
 
 <div align="center">
 
-## Isai Reyes — Frontend Developer
+## Isai Reyes — FullStack Developer
 
 Desarrollador apasionado por dashboards modernos, UI/UX premium y aplicaciones web interactivas 🚀
 
